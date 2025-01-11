@@ -24,9 +24,16 @@
             </div>
 
             <div class="form-group">
-                <label for="keahlian">Keahlian</label>
-                <input type="text" class="form-control" id="keahlian" name="keahlian" value="{{ $guru->keahlian }}" required>
-            </div>
+    <label for="keahlian">Keahlian</label>
+    <select class="form-control" id="keahlian" name="keahlian" required>
+        <option value="" disabled {{ empty($guru->keahlian) ? 'selected' : '' }}>Pilih Keahlian</option>
+        <option value="Word" {{ $guru->keahlian == 'Word' ? 'selected' : '' }}>Word</option>
+        <option value="Excel" {{ $guru->keahlian == 'Excel' ? 'selected' : '' }}>Excel</option>
+        <option value="RPL" {{ $guru->keahlian == 'RPL' ? 'selected' : '' }}>RPL</option>
+        <option value="TKJ" {{ $guru->keahlian == 'TKJ' ? 'selected' : '' }}>TKJ</option>       
+    </select>
+</div>
+
             <div class="mt-3">
                 <button type="submit" class="btn btn-primary btn-sm">Edit Guru</button>
                 <a href="{{ route('guru.index') }}" class="btn btn-danger btn-sm">Kembali</a>

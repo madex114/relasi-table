@@ -9,17 +9,13 @@ class Siswa extends Model
 {
     use HasFactory;
 
-    // Table name is optional, as it will default to 'siswas' (plural of 'siswa')
-    protected $table = 'siswa';
-
-    // Define which attributes are mass assignable
     protected $fillable = [
-        'nama_siswa', 'email', 'telepon',
+        'id_kelas', 'nama_siswa', 'email', 'telepon', 'foto'
     ];
 
     // Define the relationship with the 'Kelas' model
     public function kelas()
     {
-        return $this->hasMany(Kelas::class, 'id_siswa');
+        return $this->belongsTo(Kelas::class, 'id_kelas');  // Update this to belongsTo
     }
 }

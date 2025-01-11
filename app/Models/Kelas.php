@@ -14,7 +14,7 @@ class Kelas extends Model
 
     // Define which attributes are mass assignable
     protected $fillable = [
-        'id_guru', 'id_siswa', 'nama_kelas', 'kapasitas',
+        'id_guru', 'bidang_kelas', 'harga',
     ];
 
     // Define the relationship with the 'Guru' model
@@ -23,9 +23,4 @@ class Kelas extends Model
         return $this->belongsTo(Guru::class, 'id_guru');
     }
 
-    // Define the relationship with the 'Siswa' model
-    public function siswa()
-    {
-        return $this->belongsTo(Siswa::class, 'id_siswa');
-    }
 }

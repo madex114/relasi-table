@@ -13,10 +13,7 @@
         <!-- Start User Dropdown -->
         <ul class="navbar-nav ms-auto">
             <li class="nav-item dropdown user-menu">
-                <a href="#" class="nav-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
-                    <img src="{{ asset('foto/' . auth()->user()->profile_picture) }}" 
-                         class="user-image rounded-circle shadow me-2" 
-                         alt="User Image" width="60" height="60">
+                <a href="#" class="nav-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">                    
                     @auth
                     <span class="d-none d-md-inline">{{ auth()->user()->name }}</span>
                     @endauth

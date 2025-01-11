@@ -21,7 +21,7 @@ class auth_controller extends Controller
             $request->session()->regenerate();
     
             // Redirect ke halaman appointments.index setelah login berhasil
-            return redirect()->route('deskripsi.deskripsi')->with('status', 'Login berhasil!');
+            return redirect()->route('siswa.index')->with('status', 'Login berhasil!');
         }
     
         return back()->with('error', 'Login invalid!')->withInput();

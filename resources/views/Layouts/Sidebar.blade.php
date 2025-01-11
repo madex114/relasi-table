@@ -3,7 +3,7 @@
     <!--begin::Sidebar Brand-->
     <div class="sidebar-brand">
         <!--begin::Brand Link-->
-        <a href="./index.html" class="brand-link">
+        <a href="" class="brand-link">
             <!--begin::Brand Image-->
             <img src="{{ asset('asset/dist/assets/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image opacity-75 shadow">
             <!--end::Brand Image-->
@@ -22,9 +22,9 @@
             <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
                 <!-- Pasien -->
                 <li class="nav-item">
-                    <a href="{{ url('deskripsi.deskripsi') }}" class="nav-link">
+                    <a href="{{ url('siswa') }}" class="nav-link">
                         <i class="fa-solid fa-table"></i>
-                        <p>Deskripsi</p>
+                        <p>Daftar siswa</p>
                     </a>
                 </li>
 
@@ -41,16 +41,14 @@
                 <i class="fa-solid fa-user text-primary"></i> Data guru
             </a>
         </li>
-        <!-- Dokter -->
-        <li>
-            <a href="{{ url('siswa.index') }}" class="dropdown-item">
-                <i class="fa-solid fa-user-md text-success"></i> Data siswa
-            </a>
-        </li>
-        <!-- Jadwal -->
         <li>
             <a href="{{ url('kelas.index') }}" class="dropdown-item">
                 <i class="fa-solid fa-calendar text-danger"></i> Data Kelas
+            </a>
+        </li>
+        <li>
+            <a href="{{ url('alumni.index') }}" class="dropdown-item">
+                <i class="fa-solid fa-user-md text-success"></i> Data Alumni
             </a>
         </li>
     </ul>
